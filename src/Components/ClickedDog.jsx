@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function ClickedDog(prop) {
+export default function ClickedDog(props) {
+    const dogInfo = props.dog;
   return (
     <section>
-        <p>CLicked Dog Data:</p>
-        <p>blabla namn osv</p>
+        <p>{dogInfo.name}</p>
+        <p>Owner: {dogInfo.owner.name}</p>
     </section>
   )
 }
