@@ -15,7 +15,7 @@ export default function AllDogs(props) {
         <section className="allDogsContainer">
             <h2>All the dogs</h2>
             {
-                showClickedDog ? <ClickedDog dog={clickedDog} /> : null
+                showClickedDog ? <ClickedDog dog={clickedDog} handleClose={() => setShowClickedDog(false)} /> : null
             }
             <section className="allDogsCards">
                 {
