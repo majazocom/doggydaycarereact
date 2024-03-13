@@ -4,7 +4,7 @@ import './SmallDogCard.css';
 export default function SmallDogCard(props) {
     const dog = props.dog;
     return (
-        <article>
+        <article onClick={props.handleClick}>
             <figure className='dog-image' style={{ backgroundImage: `url(${dog.img})` }}>
             </figure>
             <section className='dog-info'>

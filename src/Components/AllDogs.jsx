@@ -2,8 +2,8 @@ import SmallDogCard from "./SmallDogCard";
 
 export default function AllDogs(props) {
     const allDogs = props.dogs;
-    function handleClickedDog() {
-        console.log('clicked on a dog');
+    function handleClickedDog(dog) {
+        console.log('clicked on a dog', dog.name);
     }
     return (
         <section className="allDogsContainer">
@@ -11,7 +11,7 @@ export default function AllDogs(props) {
             <section className="allDogsCards">
                 {
                     allDogs.map((dog, i) =>
-                        <SmallDogCard dog={dog} key={i} handleClick={() => handleClickedDog()} />
+                        <SmallDogCard dog={dog} key={i} handleClick={() => handleClickedDog(dog)} />
                     )
                 }
             </section>
